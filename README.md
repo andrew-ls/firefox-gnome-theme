@@ -8,13 +8,25 @@ This is a bunch of CSS code to make Firefox 57+ look closer to GNOME's default
 theme. It styles the UI and internal Firefox' pages like `about:` and
 `view-source:`. Both light and dark variants are supported.
 
-The `master` branch is currently tracking **Firefox 60**. If you need support
-for older versions, they are archived under version-specific git tags. Eg. if
-you're using Firefox 57, switch to the `57` tag after cloning the repo:
+The `master` branch is currently tracking **Firefox 64**. If you need support
+for older versions, they are archived under version-specific git tags. Not every
+contiguous Firefox release has a tag, so if there isn't one for your version use
+the closest version under yours.
+
+E.g. if you're using Firefox 63 there's no `63` tag, so you'll need to checkout
+the closest version tag under that, which is `60`:
 
 ```sh
-git checkout 57
+git checkout 60
 ```
+
+You can list available tags with:
+
+```sh
+git tag --list
+```
+
+
 
 ## Installation
 
