@@ -37,7 +37,10 @@
 }
 
 /* Header bar buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button) {
+#nav-bar > toolbarbutton:not(#urlbar-zoom-button),
+#nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button),
+#nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button),
+#nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button) {
 	border: var(--gnome-headerbar-button-border);
 	border-bottom: var(--gnome-headerbar-button-border-bottom);
 	border-radius: 3px;
@@ -47,18 +50,27 @@
 	height: 34px;
 }
 /* Inactive window */
-:root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button) {
+:root:-moz-window-inactive #nav-bar > toolbarbutton:not(#urlbar-zoom-button),
+:root:-moz-window-inactive #nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button),
+:root:-moz-window-inactive #nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button),
+:root:-moz-window-inactive #nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button) {
 	border: var(--gnome-inactive-headerbar-button-border);
 	border-bottom: var(--gnome-inactive-headerbar-button-border-bottom);
 }
-:root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button) image,
+:root:-moz-window-inactive #nav-bar > toolbarbutton:not(#urlbar-zoom-button) image,
+:root:-moz-window-inactive #nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button) image,
+:root:-moz-window-inactive #nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button) image,
+:root:-moz-window-inactive #nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button) image,
 /* Glitch: Downloads button's icon */
 :root:-moz-window-inactive #downloads-indicator-anchor {
 	opacity: .7 !important;
 }
 
 /* Enabled header bar buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]),
+#nav-bar > toolbarbutton:not(#urlbar-zoom-button):not([disabled]),
+#nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button):not([disabled]),
+#nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button):not([disabled]),
+#nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button):not([disabled]),
 /* Glitch: Reload button */
 :root[customizing] #nav-bar > hbox toolbaritem toolbarbutton {
 	background-image: var(--gnome-headerbar-button-bgimage);
@@ -70,17 +82,29 @@
 	opacity: 1 !important;
 }
 /* Hovered */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]):hover {
+#nav-bar > toolbarbutton:not(#urlbar-zoom-button):not([disabled]):hover,
+#nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button):not([disabled]):hover,
+#nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button):not([disabled]):hover,
+#nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button):not([disabled]):hover {
 	background-image: var(--gnome-headerbar-button-hover-bgimage);
 }
 /* Active */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]):active,
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open] {
+#nav-bar > toolbarbutton:not(#urlbar-zoom-button):not([disabled]):active,
+#nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button):not([disabled]):active,
+#nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button):not([disabled]):active,
+#nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button):not([disabled]):active,
+#nav-bar > toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open],
+#nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open],
+#nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open],
+#nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button):not([disabled])[open] {
 	background-image: var(--gnome-headerbar-button-active-bgimage);
 	box-shadow: var(--gnome-headerbar-button-active-box-shadow);
 }
 /* Inactive window */
-:root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button):not([disabled]) {
+:root:-moz-window-inactive #nav-bar > toolbarbutton:not(#urlbar-zoom-button):not([disabled]),
+:root:-moz-window-inactive #nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button):not([disabled]),
+:root:-moz-window-inactive #nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button):not([disabled]),
+:root:-moz-window-inactive #nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button):not([disabled]) {
 	background-image: var(--gnome-inactive-headerbar-button-bgimage);
 	box-shadow: var(--gnome-inactive-headerbar-button-box-shadow);
 }
@@ -97,32 +121,49 @@
 }
 
 /* Disabled header bar buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] {
+#nav-bar > toolbarbutton:not(#urlbar-zoom-button)[disabled],
+#nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button)[disabled],
+#nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button)[disabled],
+#nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button)[disabled] {
 	background-color: var(--gnome-headerbar-button-disabled-bgcolor);
 	border: var(--gnome-headerbar-button-disabled-border) !important;
 	box-shadow: var(--gnome-headerbar-button-disabled-box-shadow);
 	opacity: 1 !important;
 }
-#nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
+#nav-bar > toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
+#nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
+#nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
+#nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
 	opacity: .4 !important;
 }
 /* Glitch: Overflow and Burger buttons
  * :not(#hack) is there just to elevate rule priority */
 :root[customizing] #nav-bar > toolbarbutton[disabled]:not(#hack),
+:root[customizing] #nav-bar > hbox > toolbarbutton[disabled]:not(#hack),
+:root[customizing] #nav-bar > hbox > toolbaritem > toolbarbutton[disabled]:not(#hack),
 :root[customizing] #nav-bar > toolbaritem > toolbarbutton[disabled]:not(#hack) {
 	opacity: .5 !important;
 }
 /* Glitch: Overflow button's icon */
-:root[customizing] #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
+:root[customizing] #nav-bar > toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
+:root[customizing] #nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
+:root[customizing] #nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
+:root[customizing] #nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
 }
 /* Inactive window */
-:root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] {
+:root:-moz-window-inactive #nav-bar > toolbarbutton:not(#urlbar-zoom-button)[disabled],
+:root:-moz-window-inactive #nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button)[disabled],
+:root:-moz-window-inactive #nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button)[disabled],
+:root:-moz-window-inactive #nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button)[disabled] {
 	background-color: var(--gnome-inactive-headerbar-button-disabled-bgcolor);
 	border: var(--gnome-inactive-headerbar-button-disabled-border);
 	box-shadow: var(--gnome-inactive-headerbar-button-disabled-box-shadow);
 }
-:root:-moz-window-inactive #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
+:root:-moz-window-inactive #nav-bar > toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
+:root:-moz-window-inactive #nav-bar > hbox > toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
+:root:-moz-window-inactive #nav-bar > hbox > toolbaritem > toolbarbutton:not(#urlbar-zoom-button)[disabled] image,
+:root:-moz-window-inactive #nav-bar > toolbaritem > toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
 	opacity: .3 !important;
 }
 
@@ -152,13 +193,22 @@
 }
 
 /* Bookmark buttons */
-#nav-bar toolbarbutton.bookmark-item {
+#nav-bar > toolbarbutton.bookmark-item,
+#nav-bar > hbox > toolbarbutton.bookmark-item,
+#nav-bar > hbox > toolbaritem > toolbarbutton.bookmark-item,
+#nav-bar > toolbaritem > toolbarbutton.bookmark-item {
 	width: auto !important;
 }
-#nav-bar toolbarbutton.bookmark-item .toolbarbutton-icon {
+#nav-bar > toolbarbutton.bookmark-item .toolbarbutton-icon,
+#nav-bar > hbox > toolbarbutton.bookmark-item .toolbarbutton-icon,
+#nav-bar > hbox > toolbaritem > toolbarbutton.bookmark-item .toolbarbutton-icon,
+#nav-bar > toolbaritem > toolbarbutton.bookmark-item .toolbarbutton-icon {
 	margin-left: 6px;
 }
-#nav-bar toolbarbutton.bookmark-item .toolbarbutton-text {
+#nav-bar > toolbarbutton.bookmark-item .toolbarbutton-text,
+#nav-bar > hbox > toolbarbutton.bookmark-item .toolbarbutton-text,
+#nav-bar > hbox > toolbaritem > toolbarbutton.bookmark-item .toolbarbutton-text,
+#nav-bar > toolbaritem > toolbarbutton.bookmark-item .toolbarbutton-text {
 	padding-right: 6px;
 }
 
