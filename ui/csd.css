@@ -49,6 +49,7 @@ window:not([width="960"]):not([height="1053"]) #titlebar-buttonbox {
 
 /* Move window buttons next to the header bar */
 #titlebar-buttonbox {
+	-moz-appearance: none !important;
 	background-image: var(--gnome-headerbar-bgimage) !important;
 	border: none !important;
 	border-bottom: var(--gnome-headerbar-border-bottom) !important;
@@ -56,7 +57,7 @@ window:not([width="960"]):not([height="1053"]) #titlebar-buttonbox {
 	height: unset !important;
 	margin-top: 0 !important;
 	padding-bottom: 0 !important;
-	padding-right: 3px;
+	padding-right: 7px;
 	padding-top: 0 !important;
 }
 #titlebar-buttonbox:-moz-window-inactive {

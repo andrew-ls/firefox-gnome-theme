@@ -41,6 +41,7 @@
 
 /* Move window buttons next to the header bar */
 :root[tabsintitlebar] #titlebar-buttonbox {
+	-moz-appearance: none !important;
 	background-image: var(--gnome-headerbar-bgimage) !important;
 	border: none !important;
 	border-bottom: var(--gnome-headerbar-border-bottom) !important;
@@ -48,7 +49,7 @@
 	height: unset !important;
 	margin-top: 0 !important;
 	padding-bottom: 0 !important;
-	padding-right: 3px;
+	padding-right: 7px;
 	padding-top: 0 !important;
 }
 :root[tabsintitlebar] #titlebar-buttonbox:-moz-window-inactive {
